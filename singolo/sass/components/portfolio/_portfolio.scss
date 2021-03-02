@@ -1,0 +1,112 @@
+.portfolio {
+   @include background(#303441,#373b4a, 3.75rem 0 1.8125rem);
+
+   &_background {
+       @include site_width;
+   }
+
+   &_title {
+       @include font ($fontcolor,"Lato_Black",30px);
+       margin-left: $pf-indent;
+   }
+
+   &_description {
+       @include font (#767e9e,"Lato_Light",18px);
+       margin: 1.3125rem 0 0.9375rem $pf-indent;
+   }
+
+   &_list {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: flex-start;
+       margin: 1.25rem 0 0.78948rem;
+   }
+
+   &_item {
+       width: (100% - $pf-indent * 8)/4;
+       margin: 0 $pf-indent $pf-indent*2;
+       overflow: hidden;
+
+
+       &_link {
+           display: block;
+           transition: all 1s;
+
+           &:hover {
+               transform: scale(1.25, 1.25);
+           }
+       }
+   }
+
+   &_image {
+       width: 100%;
+       max-height: 100%;
+   }
+}
+
+
+.radio {
+   display: none;
+
+   &:checked + .button {
+       color: #dedede;
+       border-color: #dedede;
+   }
+
+   &_web_design, {
+       &:checked ~ .portfolio_list  {
+           .portfolio_item {
+               display: none;
+           }
+
+           .portfolio_item_l1 {
+               display: list-item;
+           }
+       }
+   }
+
+   &_graphic_design {
+       &:checked ~ .portfolio_list  {
+           .portfolio_item {
+               display: none;
+           }
+
+           .portfolio_item_l2 {
+               display: list-item;
+           }
+       }
+   }
+
+   &_artwork {
+       &:checked ~ .portfolio_list  {
+           .portfolio_item {
+               display: none;
+           }
+
+           .portfolio_item_l3 {
+               display: list-item;
+           }
+       }
+   }
+}
+
+.button {
+   font-size: 12px;
+   line-height: 21.56px;
+   color: #767e9e;
+   border: 1px solid #767e9e;
+   border-radius: 5px;
+   padding: 0.1875rem 0.375rem;
+
+   &_all {
+       margin: 0 0.5rem 0 0.625rem;
+   }
+
+   &_web_design {
+       margin-right: 0.4375rem;
+   }
+
+   &_graphic_design {
+       margin-right: 0.375rem;
+   }
+}

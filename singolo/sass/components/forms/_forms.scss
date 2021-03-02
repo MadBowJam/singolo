@@ -1,0 +1,92 @@
+.forms {
+    @include background (#eb5055, #ea676b, 4.0625rem 0);
+ 
+    &_background {
+        @include site_width; 
+    }
+
+    &_title {
+        @include font (#f0d8d9, 'Lato_Black', 30px);
+    }
+
+    &_description {
+        @include font (#f0d8d9, 'Lato_Light', 18px);
+        line-height: 1.5;
+        margin: 3.1rem 0 1.8rem 0;
+    }
+
+    &_input {
+        font-size: 12px;
+        width: 36rem;
+        height: 2rem;
+        padding: 0.3rem 1rem;
+        border-radius: 4px;
+        background-color: #ca4549;
+        color: white;
+
+        &::placeholder {
+            color: #f48c8f;
+        }
+
+        &:focus {
+            outline-color: white;
+        }
+
+        &_describe {
+            width: 39rem;
+            padding-bottom: 11rem;
+        }
+
+        &_item {
+            margin: 1rem 1.5rem 0 0;
+
+            &_describe {
+                padding-top: 0.5rem;
+                border: none;
+                max-width: 36rem;
+                min-width: 36rem;
+                min-height: 10rem;
+                max-height: 10rem;
+
+                &::placeholder {
+                    font-family: 'Lato_Regular';
+                    font-size: 13px;
+                }
+
+                &:focus {
+                    outline-color: white;
+                }
+            }
+        }   
+    }
+
+    &_info {
+        display: flex;
+
+        &_list {
+             margin-top: 0.9rem;
+        }
+
+        &_description {
+            line-height: 1.5;
+            margin: 2rem 0;
+        }
+
+        &_contact_item {
+            margin-top: 0.8rem;
+        }
+
+        &_title {
+            @include font (#f0d8d9, 'Lato_Black', 18px);
+        }
+
+        &_item {
+            @include font (#f0d8d9, 'Lato_Regular', 12px);
+        }
+
+        &_contact_link {
+            @include font (#f0d8d9, 'Lato_Regular', 12px);
+            margin-left: 1rem;
+        } 
+    }
+}

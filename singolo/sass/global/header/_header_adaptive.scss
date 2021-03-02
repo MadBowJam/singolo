@@ -1,0 +1,40 @@
+@media  (max-width: 939px) {
+    .header {
+        &_background {
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        &_navbar_item {
+            padding-left: 1.25rem;
+
+            &::before {
+                margin: 0.625rem 0 -0.625rem -0.625rem;
+            }
+        }
+    }
+}
+
+@media  (max-width: 640px) {
+    .header {
+        &_background {
+            flex-direction: column;
+        }
+
+        &_logo {
+            text-align: center;
+        }
+
+        &_navbar_list {
+            flex-direction: column;
+        }
+
+        &_navbar_item {
+            padding: 0.625rem 0 0;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+}

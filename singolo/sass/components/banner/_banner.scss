@@ -1,0 +1,12 @@
+.banner {
+    @include background(#eb5055, #ea676b, 3.625rem 0);
+
+    &_background {
+        @include site_width;
+        text-align: center;
+    }
+
+    &_image {
+        width: 30rem;
+    }
+}

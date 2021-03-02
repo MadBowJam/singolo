@@ -1,0 +1,13 @@
+@media  (max-width: 939px) {
+    .services {
+        @include adaptive;
+
+        &_item {
+            margin: 0 0.625rem 2.5rem;
+        }
+
+        &_list {
+            justify-content: space-around;
+        }
+    }
+}
