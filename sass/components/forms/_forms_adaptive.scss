@@ -1,0 +1,55 @@
+@media (max-width: 939px) {
+    .forms  {
+        @include adaptive;
+
+        &_input {
+            width: 16rem;
+            text-align: center;
+
+            &_item_describe {
+                max-width: 16rem;
+                min-width: 16rem;
+            }
+
+            &_list {
+                text-align: center;
+                margin-right: -1.5rem;
+            }
+        }
+
+        &_info {
+            margin: 3.1rem 1rem 0;
+            flex-direction: column;
+
+            &_description {
+                text-align: justify;
+            }
+
+            &_title {
+                margin-bottom: 1.2rem;
+            }
+
+            &_list {
+                text-align: center;
+            }
+
+            &_contact_list {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .forms_info_contact {
+
+        &_list {
+        flex-direction: column;
+        }
+
+        &_item {
+            margin-right: 1rem;
+        }
+    }
+}

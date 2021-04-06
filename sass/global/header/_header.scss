@@ -1,0 +1,50 @@
+.header {
+    @include background(#303441, #373b4a, 1.875rem 0);
+
+    &_background {
+        @include site_width;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_logo {
+        @include font (#ffffff, 'Lato_Bold', 28px);
+
+        &_star {
+            color: #c7494e;
+        }
+    }
+
+    &_navbar_list {
+        display: flex;
+        align-items: center;
+    }
+
+    &_navbar_item {
+        padding-left: 1.875rem;
+
+        &:first-child::before {
+            display: none;
+        }
+
+        &::before {
+            @include pseudo;
+            border-left: 1px solid white;
+            border-color: #494e62;
+            margin: 0.625rem 0 -0.625rem -0.9375rem;
+            height: 1px;
+        }
+
+        &_link {
+            @include font (#ffffff, 'Lato_Bold', 15px);
+
+            &:hover {
+                color: #eb5055;
+            }
+        }
+    }
+}
+
+
+
+

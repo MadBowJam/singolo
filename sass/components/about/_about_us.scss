@@ -1,0 +1,75 @@
+.about_us {
+    @include background(#f2f2f2,#ffffff);
+
+    &_background{
+        @include site_width;
+    }
+
+    &_title{
+        @include font($fontcolor, 'Lato_Black', 30px);
+    }
+
+
+    &_description{
+        @include font ($fontcolor, 'Lato_Light', 18px);
+        margin: 1.5rem 0 3.125rem;
+        line-height: 1.7rem;
+    }
+
+    &_list{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_item {
+        width: 300px;
+        transition: all .5s linear;
+        overflow: hidden;
+    
+        &_title{
+            @include font ($fontcolor, 'Lato_Black',18px);
+            margin-bottom: 0.3rem;
+        }
+
+
+        &:hover{
+            box-shadow: 0 14px 28px $fontcolor;
+        }
+
+        &_description{
+        @include font ($fontcolor, 'Lato_Regular',12px);
+        line-height: 22px;
+        text-align: justify;
+        margin-bottom: 1.75rem;
+        }
+    }
+
+    &_social_list{
+        display:flex;
+    }
+
+    &_social_link {
+        display: block;
+        font-size: 0;
+        height: 100%;
+        width: 100%;
+    }
+    &_social_item {
+        margin-right: 0.5rem;
+        height: 30px;
+
+        &_icon {
+            color: $fontcolor;
+            font-size: 14px;
+            padding: 0.5rem;
+            border: 1px solid $fontcolor;
+            border-radius: 50%;
+            transition: all .1s linear;
+
+            &:hover {
+                border: 2px solid;
+                padding: 0.43765rem;
+            }
+        }
+    }
+}
